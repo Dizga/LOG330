@@ -20,6 +20,6 @@ public class HelloWorldTest {
 
 	@Test
 	public void testTest() {
-		assertEquals(1.25d,calcul.Variance(tab));
+		assertEquals(1.25d,calcul.Variance(tab),0.01d);
 	}
 }
