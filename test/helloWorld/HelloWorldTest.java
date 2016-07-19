@@ -27,4 +27,9 @@ public class HelloWorldTest {
 		double[] tab = {Math.sqrt(Double.MIN_VALUE*2),-Math.sqrt(Double.MIN_VALUE*2)};
 		assertEquals(Double.MIN_VALUE,calcul.Variance(tab),1d);
 	}
+	@Test
+	public void testVarianceInv() {
+		double[] tab = {};
+		assertTrue(Double.isNAN(calcul.Variance(tab)));
+}
 }
