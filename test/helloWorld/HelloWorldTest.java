@@ -9,7 +9,6 @@ import uk.co.placona.helloWorld.Calcul;
 
 public class HelloWorldTest {
 
-	double tab[] = {2d,1d,3d,4d};
 	Calcul calcul = new Calcul();
 	
 	@Test
@@ -19,7 +18,13 @@ public class HelloWorldTest {
 	}
 
 	@Test
-	public void testTest() {
-		assertEquals(1.25d,calcul.Variance(tab),0.01d);
+	public void testVarianceMax() {
+		double[] tab = {Math.sqrt(Double.MAX_VALUE/2),-Math.sqrt(Double.MIN_VALUE/2)};
+		assertEquals(Double.MAX_VALUE,calcul.Variance(tab),1d);
+	}
+	@Test
+	public void testVarianceMin() {
+		double[] tab = {Math.sqrt(Double.MIN_VALUE*2),-Math.sqrt(Double.MIN_VALUE*2)};
+		assertEquals(Double.MIN_VALUE,calcul.Variance(tab),Double.MIN_VALUE);
 	}
 }
