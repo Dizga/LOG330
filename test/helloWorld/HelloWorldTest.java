@@ -66,4 +66,17 @@ public class HelloWorldTest {
 		assertTrue(Double.isNaN(calcul.Correlation(tab)));
 	}
 	
+	@Test
+	public void testRegLinMax() {
+		assertEquals(Double.MAX_VALUE,(calcul.RegLinB1(Double.MAX_VALUE,1d,0,0d,0d)),1d);
+	}
+	@Test
+	public void testRegLinMin() {
+		assertEquals(-Double.MAX_VALUE,(calcul.RegLinB1(-Double.MAX_VALUE,1d,0,0d,0d)),1d);
+	}
+	@Test
+	public void testRegLinInv() {
+		assertTrue(Double.isNaN(calcul.RegLinB1(0d,0d,0,0d,0d)));
+	}
+	
 }
