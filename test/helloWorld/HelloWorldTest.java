@@ -84,7 +84,7 @@ public class HelloWorldTest {
 		assertEquals(Double.MAX_VALUE,(calcul.Confidence(Double.MAX_VALUE,1)),1d);
 	}
 	@Test
-	public void testConfidenceMax() {
+	public void testConfidenceMin() {
 		assertEquals(-Double.MAX_VALUE,(calcul.Confidence(-Double.MAX_VALUE,1)),1d);
 	}
 }
