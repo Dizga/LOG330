@@ -1,4 +1,4 @@
-package org.pbit.ci.travis.java;
+package uk.co.placona.helloWorld;
 
 public class Calcul {
 
