@@ -41,9 +41,11 @@ public class Calcul {
   	public double RegLin(double tabXY[][],boolean choix){
   
     		int nbVal = tabXY[0].length;
-	  	double[] tabSXY,tabSXX,tabSYY;
+	  	double[] tabSXY,tabSXX;
 		double sXX,sXY,mX,mY,b1,b2;
   
+  		tabSXY = multiplication(tabXY[0],tabXY[1]);
+		tabSXX = multiplication(tabXY[0],tabXY[0]);
     		mX = Somme(tabXY[0])/nbVal;
 		mY = Somme(tabXY[1])/nbVal;
 		sXX = Somme(tabSXX);
