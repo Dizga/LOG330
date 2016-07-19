@@ -1,4 +1,4 @@
-<project name="travis playground" default="dist" basedir=".">
+<project name="LOG330" default="dist" basedir=".">
     <description>
         travis stuff
     </description>
