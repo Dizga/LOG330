@@ -37,6 +37,25 @@ public class Calcul {
 		correlation = (nbVal*sXY-sX*sY)/Math.sqrt((nbVal*sXX-sX*sX)*(nbVal*sYY-sY*sY));
 		return correlation;
   	}
+  	
+  	public double RegLin(double tabXY[][],boolean choix){
+  
+    		int nbVal = tabXY[0].length;
+	  	double[] tabSXY,tabSXX,tabSYY;
+		double sXX,sXY,mX,mY,b1,b2;
+  
+    		mX = Somme(tabXY[0])/nbVal;
+		mY = Somme(tabXY[1])/nbVal;
+		sXX = Somme(tabSXX);
+		sXY = Somme(tabSXY);
+		b1= (sXY-nbVal*mX*mY)/(sXX-nbVal*mX*mX);
+        	b2= mY-b1*mX;
+		if(choix){
+			return b1;
+		}else{
+			return b2;
+		}
+  	}
 
   	public double Somme(double tab[]){
 		double result = 0;
