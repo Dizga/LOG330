@@ -29,6 +29,10 @@
     <javac srcdir="${test}" destdir="${build}/test">
       <classpath>
 	<pathelement location="${junit}"/>
+	<pathelement location="${src}" />
+    	<pathelement location="${test}" />
+    	<pathelement location="${build}/main"/>
+    	<pathelement location="${build}/test"/>
       </classpath>
     </javac>
   </target>
