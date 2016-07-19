@@ -20,7 +20,7 @@ public class HelloWorldTest {
 	@Test
 	public void testVarianceMax() {
 		double[] tab = {Math.sqrt(Double.MAX_VALUE/2),-Math.sqrt(Double.MAX_VALUE/2)};
-		assertEquals(Double.MAX_VALUE/2,calcul.Variance(tab),1d);
+		assertEquals(Double.MAX_VALUE/2,calcul.Variance(tab),Double.MAX_VALUE/2);
 	}
 	@Test
 	public void testVarianceMin() {
