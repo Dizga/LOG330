@@ -15,7 +15,7 @@ public class Calcul {
 		for(int i=0;i<tab.length;i++){
 			tabDistance[i]=(tab[i]-moyenne)*(tab[i]-moyenne);
 		}
-		variance = Somme(tabDistance)/(nbVal-1);
+		variance = Somme(tabDistance)/(nbVal);
 	return variance;
   }
 
