@@ -11,7 +11,7 @@ public class TestTest {
     @Test
     public void testTest() {
 	assertTrue(1 == 1);
-	assertTrue(calcul.Variance(tab) == 1.26d)
+	assertTrue(calcul.Variance(tab) == 1.25d);
     }
 }
 
