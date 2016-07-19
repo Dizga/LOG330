@@ -36,7 +36,7 @@ public class HelloWorldTest {
 	
 	@Test
 	public void testCorrelationMin() {
-		double[][] tab = [3][3];
+		double[][] tab = new double[3][3];
 		tab[0][0] = Math.sqrt(Double.MIN_VALUE*2)*2;
 		tab[0][1] = Math.sqrt(Double.MIN_VALUE*2);
 		tab[0][2] = 0d;
@@ -47,7 +47,7 @@ public class HelloWorldTest {
 	}
 	@Test
 	public void testCorrelationMax() {
-		double[][] tab = [3][3];
+		double[][] tab = new double[3][3];
 		tab[0][0] = 0d;
 		tab[0][1] = Math.sqrt(Double.MIN_VALUE*2);
 		tab[0][2] = Math.sqrt(Double.MIN_VALUE*2)*2;
