@@ -31,5 +31,35 @@ public class HelloWorldTest {
 	public void testVarianceInv() {
 		double[] tab = {};
 		assertTrue(Double.isNaN(calcul.Variance(tab)));
-}
+	}
+	
+	
+	@Test
+	public void testCorrelationMin() {
+		double[][] tab = [3][3];
+		tab[0][0] = Math.sqrt(Double.MIN_VALUE*2)*2;
+		tab[0][1] = Math.sqrt(Double.MIN_VALUE*2);
+		tab[0][2] = 0d;
+		tab[1][0] = 0d;
+		tab[1][1] = 9d;
+		tab[1][2] = 18d;
+		assertTrue(-1d,(calcul.Correlation(tab)),0.001d);
+	}
+	@Test
+	public void testCorrelationMax() {
+		double[][] tab = [3][3];
+		tab[0][0] = 0d;
+		tab[0][1] = Math.sqrt(Double.MIN_VALUE*2);
+		tab[0][2] = Math.sqrt(Double.MIN_VALUE*2)*2;
+		tab[1][0] = 0d;
+		tab[1][1] = 9d;
+		tab[1][2] = 18d;
+		assertTrue(1d,(calcul.Correlation(tab)),0.001d);
+	}
+	@Test
+	public void testCorrelationInv() {
+		double[][] tab;
+		assertTrue(Double.isNaN(calcul.Correlation(tab)));
+	}
+	
 }
