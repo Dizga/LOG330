@@ -58,7 +58,11 @@ public class HelloWorldTest {
 	}
 	@Test
 	public void testCorrelationInv() {
-		double[][] tab;
+		double[][] tab = new double[2][2];
+		tab[0][0] = 0d;
+		tab[0][1] = 0d;
+		tab[1][0] = 0d;
+		tab[1][1] = 0d;
 		assertTrue(Double.isNaN(calcul.Correlation(tab)));
 	}
 	
