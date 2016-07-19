@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import uk.co.placona.helloWorld.HelloWorld;
+import uk.co.placona.helloWorld.Calcul;
 
 public class HelloWorldTest {
 
