@@ -30,6 +30,6 @@ public class HelloWorldTest {
 	@Test
 	public void testVarianceInv() {
 		double[] tab = {};
-		assertTrue(Double.isNAN(calcul.Variance(tab)));
+		assertTrue(Double.isNaN(calcul.Variance(tab)));
 }
 }
