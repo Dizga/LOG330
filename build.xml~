@@ -1,4 +1,4 @@
-<project name="LOG330" default="dist" basedir=".">
+<project name="LOG33" default="dist" basedir=".">
     <description>
         travis stuff
     </description>
