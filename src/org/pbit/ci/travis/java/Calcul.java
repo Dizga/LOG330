@@ -8,7 +8,7 @@ public class Calcul {
 	  double moyenne;
 	  double variance;
   
-    moyenne = Somme(tab)/tab.length;
+    		moyenne = Somme(tab)/tab.length;
 		nbVal = tab.length;
 		
 		double[] tabDistance = new double[nbVal];
@@ -16,6 +16,7 @@ public class Calcul {
 			tabDistance[i]=(tab[i]-moyenne)*(tab[i]-moyenne);
 		}
 		variance = Somme(tabDistance)/(nbVal-1);
+	return variance;
   }
 
   public double Somme(double tab[]){
