@@ -58,6 +58,13 @@ public class Calcul {
 			return b2;
 		}
   	}
+  	
+  	public double RegLinB1(double sXY,double sXX,int nbVal,double mX,double mY){
+  		return (sXY-nbVal*mX*mY)/(sXX-nbVal*mX*mX);
+  	}
+  	public double RegLinB2(double b1,double mX,double mY){
+  		return mY-b1*mX;
+  	}
 
   	public double Somme(double tab[]){
 		double result = 0;
