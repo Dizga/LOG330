@@ -65,6 +65,10 @@ public class Calcul {
   	public double RegLinB2(double b1,double mX,double mY){
   		return mY-b1*mX;
   	}
+  	
+  	public double Confidence(double deviation, int nbVal){
+  		return deviation*Math.sqrt(nbVal);
+	}
 
   	public double Somme(double tab[]){
 		double result = 0;
