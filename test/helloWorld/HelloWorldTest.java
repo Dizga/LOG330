@@ -79,4 +79,12 @@ public class HelloWorldTest {
 		assertTrue(Double.isNaN(calcul.RegLinB1(0d,0d,0,0d,0d)));
 	}
 	
+	@Test
+	public void testConfidenceMax() {
+		assertEquals(Double.MAX_VALUE,(calcul.Confidence(Double.MAX_VALUE,1)),1d);
+	}
+	@Test
+	public void testConfidenceMax() {
+		assertEquals(-Double.MAX_VALUE,(calcul.Confidence(-Double.MAX_VALUE,1)),1d);
+	}
 }
