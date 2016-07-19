@@ -2,11 +2,11 @@ package uk.co.placona.helloWorld;
 
 public class Calcul {
 
-  public double Variance(double tab[]){
+  	public double Variance(double tab[]){
   
-    int nbVal;
-	  double moyenne;
-	  double variance;
+    		int nbVal;
+	  	double moyenne;
+	  	double variance;
   
     		moyenne = Somme(tab)/tab.length;
 		nbVal = tab.length;
@@ -16,14 +16,40 @@ public class Calcul {
 			tabDistance[i]=(tab[i]-moyenne)*(tab[i]-moyenne);
 		}
 		variance = Somme(tabDistance)/(nbVal);
-	return variance;
-  }
+		return variance;
+  	}
+  	
+  	public double Correlation(double tabXY[][]){
+  
+    		int nbVal = tabXY[0].length;
+	  	double[] tabSXY,tabSXX,tabSYY;
+		double sX,sY,sXX,sXY,sYY;
+	  	double correlation;
+  
+    		tabSXY = multiplication(tabXY[0],tabXY[1]);
+		tabSXX = multiplication(tabXY[0],tabXY[0]);
+		tabSYY = multiplication(tabXY[1],tabXY[1]);
+		sX = Somme(tabXY[0]);
+		sY = Somme(tabXY[1]);
+		sXX = Somme(tabSXX);
+		sXY = Somme(tabSXY);
+		sYY = Somme(tabSYY);
+		correlation = (nbVal*sXY-sX*sY)/Math.sqrt((nbVal*sXX-sX*sX)*(nbVal*sYY-sY*sY));
+		return correlation;
+  	}
 
-  public double Somme(double tab[]){
+  	public double Somme(double tab[]){
 		double result = 0;
 		for(double donne:tab){
 			result+=donne;
 		}
 		return result;
+	}
+	public static double[] multiplication(double tab[],double tab1[]){
+		double[] multi =new double[tab.length];
+		for (int i=0;i<tab.length;i++){
+			multi[i]=tab[i]*tab1[i];
+		}
+		return multi;
 	}
 }
