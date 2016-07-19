@@ -43,7 +43,7 @@ public class HelloWorldTest {
 		tab[1][0] = 0d;
 		tab[1][1] = 9d;
 		tab[1][2] = 18d;
-		assertTrue(-1d,(calcul.Correlation(tab)),0.001d);
+		assertEquals(-1d,(calcul.Correlation(tab)),0.001d);
 	}
 	@Test
 	public void testCorrelationMax() {
@@ -54,7 +54,7 @@ public class HelloWorldTest {
 		tab[1][0] = 0d;
 		tab[1][1] = 9d;
 		tab[1][2] = 18d;
-		assertTrue(1d,(calcul.Correlation(tab)),0.001d);
+		assertEquals(1d,(calcul.Correlation(tab)),0.001d);
 	}
 	@Test
 	public void testCorrelationInv() {
