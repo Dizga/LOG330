@@ -52,11 +52,6 @@ public class Calcul {
 		sXY = Somme(tabSXY);
 		b1= (sXY-nbVal*mX*mY)/(sXX-nbVal*mX*mX);
         	b2= mY-b1*mX;
-		if(choix){
-			return b1;
-		}else{
-			return b2;
-		}
   	}
   	
   	public double RegLinB1(double sXY,double sXX,int nbVal,double mX,double mY){
